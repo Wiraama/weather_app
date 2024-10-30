@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="static/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Main Weather Section -->
+    <div class="weather-container">
+        <!-- Header -->
+        <header>
+            <h1>Wiriama Weather Dashboard</h1>
+			<form method="POST" action="{{ url_for('home') }}">
+				<input type="text" name="search" placeholder="Search city..." id="search-input">
+				<button id="search-btn" type="submit">Search</button>
+			</form>
+        </header>
+
+        <!-- Current Weather Display -->
+        <section class="current-weather">
+            <h2>Current Weather</h2>
+            <div class="weather-summary">
+                <h3>
+					{{ to_app['city'] }}, {{ to_app['country'] }}
+				</h3>
+                <p id="current-date">{{ to_app.day }}, {{ to_app.month }} {{ to_app.date }}</p>
+                <p id="weather-description">{{ to_app['weather'] }}</p>
+                <h1 id="current-temp">{{ to_app['temp'] }}℃</h1>
+                <img src="http://openweathermap.org/img/wn/{{ to_app.icon }}@2x.png" alt="Weather Icon">
+            </div>
+            <div class="details">
+                <p>Humidity: <span id="humidity">{{ to_app['humidity'] }}%</span></p>
+                <p>Wind Speed: <span id="wind-speed">{{ to_app['wind_speed'] }} m/s</span></p>
+                <p>Pressure: <span id="uv-index">{{ to_app.pressure }} Atm</span></p>
+                <p>Visibility: <span id="air-quality">{{ to_app.visibility }} Km</span></p>
+            </div>
+        </section>
+
+        <!-- Weekly Forecast -->
+        <section class="weekly-forecast">
+            <h2>Weekly Forecast</h2>
+            <div class="daily-container">
+                <!-- Single Day Forecast (Repeat this block for each day) -->
+                <div class="day">
+                    <p class="day-name">Wednesday</p>
+                    <img src="http://openweathermap.org/img/wn/{{ to_app.icon }}@2x.png" alt="Weather Icon">
+                    <p class="day-temp">{{ to_app.temp }}°C</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>

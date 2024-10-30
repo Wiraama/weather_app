@@ -1,0 +1,178 @@
+/* General Reset and Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.weather-container {
+    max-width: 800px;
+    width: 100%;
+    background-color: #ffffff;
+	background-image: url('images/bg1.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    color: white;
+}
+
+#search-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 60%;
+}
+
+#search-btn {
+    padding: 10px 15px;
+    background-color: #0b2616;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#search-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Current Weather */
+.current-weather {
+    background-color: #f9fbfc;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.current-weather h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.weather-summary h3 {
+    font-size: 20px;
+    color: white;
+}
+
+.weather-summary h1 {
+    font-size: 48px;
+    color: #007bff;
+    margin: 10px 0;
+}
+
+.weather-summary img {
+    width: 80px;
+    height: 80px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+/* Hourly Forecast */
+.hourly-forecast {
+    margin-bottom: 20px;
+}
+
+.hourly-forecast h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #555;
+    text-align: center;
+}
+
+.hourly-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+}
+
+.hour {
+    background-color: #f9fbfc;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    min-width: 80px;
+}
+
+.hour p {
+    margin: 5px 0;
+}
+
+/* Weekly Forecast */
+.weekly-forecast {
+    margin-bottom: 20px;
+}
+
+.weekly-forecast h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #555;
+    text-align: center;
+}
+
+.daily-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.day {
+    background-color: #f9fbfc;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    width: 100px;
+}
+
+.day-name {
+    font-weight: bold;
+}
+
+/* Additional Weather Details */
+.extra-details h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #555;
+    text-align: center;
+}
+
+.extra-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.extra-info p {
+    margin: 10px;
+    font-size: 14px;
+}
