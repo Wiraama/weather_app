@@ -31,7 +31,7 @@ body {
 /* Header */
 header {
     display: flex;
-    background-color: black;
+    background-color: #051a4a;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
@@ -64,7 +64,7 @@ header h1 {
 
 /* Current Weather */
 .current-weather {
-    background-color: #f9fbfc;
+    background-color: #001f7a;
     border-radius: 10px;
     padding: 15px;
     margin-bottom: 20px;
