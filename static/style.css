@@ -18,7 +18,7 @@ body {
 .weather-container {
     max-width: 800px;
     width: 100%;
-    background-color: #ffffff;
+    background-color: #07162b;
 	background-image: url('images/bg1.jpg');
 	background-size: cover;
 	background-position: center;
